@@ -2,10 +2,12 @@
 mod test;
 
 use byteorder::{BigEndian, ReadBytesExt, WriteBytesExt};
-use serde::{Deserialize, Serialize};
 use std::io::{self, Cursor, Read, Seek, SeekFrom, Write};
 use std::string::FromUtf8Error;
 use thiserror::Error;
+
+#[cfg(feature = "serde")]
+use serde::{Deserialize, Serialize};
 
 const IDENTIFIER: u32 = 0x57494C44;
 
