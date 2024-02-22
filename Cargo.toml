@@ -1,0 +1,26 @@
+[package]
+name = "wild-container"
+authors = ["Wild Heart Studios"]
+description = "The reference implementation of the Wild Container Format"
+documentation = "https://docs.rs/wild-container"
+readme = "README.md"
+homepage = "https://github.com/wild-heart-studios/wild-container"
+repository = "https://github.com/wild-heart-studios/wild-container"
+keywords = ["container"]
+categories = ["encoding", "game-development"]
+license = "MIT OR Apache-2.0"
+rust-version = "1.60.0"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+serde = ["dep:serde"]
+
+[dependencies]
+thiserror = "1.0"
+byteorder = "1.5.0"
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+optional = true
